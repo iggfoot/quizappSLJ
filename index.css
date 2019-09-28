@@ -1,0 +1,6 @@
+* {
+    box-sizing: border-box;
+}
+.quiz, .results, .right-answer, .wrong-answer {
+    display: none;
+}
