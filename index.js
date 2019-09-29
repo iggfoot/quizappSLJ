@@ -65,10 +65,12 @@ function submitAnswer() {
   
     let question = quizQuestions[currentQuestion];
     if (guess == question.correctAnswer) {
-        score++;
-        alert("CHECK OUT THE BIG BRAIN ON BRAD!")
+        //score++;
+        //alert("CHECK OUT THE BIG BRAIN ON BRAD!")
+        rightAnswerView();
     } else {
-        alert("DOES HE LOOK LIKE A BITCH?")
+        //alert("DOES HE LOOK LIKE A BITCH?")
+        wrongAnswerView();
     };
   
     currentQuestion++;
@@ -81,11 +83,12 @@ function submitAnswer() {
     }
   });
 
-/*function rightAnswerView() {
+function rightAnswerView() {
    $('.quiz').hide();
    $('.right-answer').show();
    
-   $('#continue-quiz').click(function(event) {
+   $('#right-continue-quiz').click(function(event) {
+     event.preventDefault();
      $('.right-answer').hide();
      $('.quiz').show();
    })
@@ -93,8 +96,16 @@ function submitAnswer() {
 }
 
 function wrongAnswerView() {
+   $('.quiz').hide();
+   $('.wrong-answer').show();
 
-}*/
+   $('#wrong-continue-quiz').click(function(event) {
+    event.preventDefault();
+    $('.wrong-answer').hide();
+    $('.quiz').show();
+  })
+
+}
 
 
 function finalResults() {
