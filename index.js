@@ -65,7 +65,7 @@ function submitAnswer() {
   
     let question = quizQuestions[currentQuestion];
     if (guess == question.correctAnswer) {
-        //score++;
+        score++;
         //alert("CHECK OUT THE BIG BRAIN ON BRAD!")
         rightAnswerView();
     } else {
@@ -96,7 +96,11 @@ function rightAnswerView() {
 }
 
 function wrongAnswerView() {
+   let question = quizQuestions[currentQuestion];
+   let actualAnswer = question.correctAnswer;
+   console.log(actualAnswer);
    $('.quiz').hide();
+   $('#actual').text(`The correct answer is ${question.choices[actualAnswer]}`);   
    $('.wrong-answer').show();
 
    $('#wrong-continue-quiz').click(function(event) {
@@ -105,7 +109,7 @@ function wrongAnswerView() {
     $('.quiz').show();
   })
 
-}
+};
 
 
 function finalResults() {
