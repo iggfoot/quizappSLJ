@@ -48,6 +48,8 @@ function showQuestion() {
     for (var i = 0; i < question.choices.length; i ++) {
         $('.quiz form').append(`<input type="radio" name="choice" value="${i}" checked>${question.choices[i]}<br>`);   
     };
+    $('#question-counter').text(`Question ${currentQuestion + 1} of ${quizQuestions.length}`);
+    $('#score-counter').text(`Score: ${score} out of ${quizQuestions.length}`);
     submitAnswer();
 }
 
@@ -66,10 +68,8 @@ function submitAnswer() {
     let question = quizQuestions[currentQuestion];
     if (guess == question.correctAnswer) {
         score++;
-        //alert("CHECK OUT THE BIG BRAIN ON BRAD!")
         rightAnswerView();
     } else {
-        //alert("DOES HE LOOK LIKE A BITCH?")
         wrongAnswerView();
     };
   
