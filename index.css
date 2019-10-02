@@ -1,6 +1,151 @@
 * {
     box-sizing: border-box;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    font-family: sans-serif;
+    background-color: #730E18;
+    color:black;
 }
-.quiz, .results, .right-answer, .wrong-answer {
+
+img {
+    height: 300px;
+    width: 400px;
+}
+
+.start, .quiz {
+    align-content: center;
+    background-color: white;
+    width: 500px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border-style: double;
+}
+.start img {
+    height: 420px;
+    width: 280px;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.quiz {
+    padding-left: 10px;
+    background-color: white;
+}
+
+.quiz h2{
+    font-size: 24px;
+    background-color: white;
+}
+
+.quiz form{
+    background-color: white;
+    color:black;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+
+#question-counter {
+    display: inline-block;
+    background-color: white;
+    font-size: 18px;
+}
+
+#score-counter{
+    padding-right: 10px;
+    background-color: white;
+    font-size: 18px;
+    float: right;
+}
+
+.right-answer, .wrong-answer {
+    align-content: center;
+    background-color: white;
+    width: 500px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border-style: double;
+
+}
+
+.right-answer h2, .wrong-answer h2{
+    background-color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    color: black;
+}
+
+.right-answer img {
+    height: 300px;
+    width: 400px;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.wrong-answer img {
+    height: 300px;
+    width: 400px;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.right-answer button {
+    margin-top: 20px;
+}
+
+#actual {
+    background-color:white;
+    font-size: 22px;
+    text-align: center;
+}
+
+
+h1 {
+    text-align: center;
+    background-color: white;
+    font-size: 25px;
+    color: black;
+    padding-top:15px;
+}
+
+.results p {
+    background-color: white;
+    color:black;
+}
+
+
+
+.start h2 {
+    color:black;
+    background-color: white;
+    text-align: center;
+}
+
+button {
+    border-radius: 5px;
+    border-style: double;
+    background-color: white;
+    border-width: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+button:hover {
+    background-color: #BD8D46;
+}
+
+
+.quiz, .results, .answer {
     display: none;
 }
